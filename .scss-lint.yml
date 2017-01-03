@@ -1,0 +1,13 @@
+linters:
+  HexNotation:
+    style: 'lowercase'
+  HexLength:
+    style: 'short'
+  SingleLinePerSelector:
+    enabled: false
+  LeadingZero:
+    style: 'include_zero'
+  NestingDepth:
+    max_depth: 4
+  SelectorDepth:
+    max_depth: 4

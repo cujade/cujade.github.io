@@ -1,0 +1,112 @@
+// Font weights
+$extra-bold: 900;
+$bold: 700;
+$medium: 500;
+$regular: 400;
+$light: 300;
+
+$sans: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+h1, %h1 {
+  color: $jade;
+  font-size: 2.75rem;
+  font-weight: $extra-bold;
+  letter-spacing: -0.5px;
+  line-height: 3rem;
+
+  &::selection {
+    background-color: $medium-light-gray;
+  }
+}
+
+h2, %h2 {
+  color: $gray;
+  font-size: 1rem;
+  font-weight: $bold;
+  letter-spacing: 3px;
+  line-height: 1.4rem;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+h3, %h3 {
+  color: $jade; // big enough that we don't need the jade-text shade
+  font-size: 1.25rem;
+  padding-top: 2rem;
+
+  a {
+    border-bottom: 3px solid $transparent;
+    position: relative;
+
+    &:hover {
+      border-bottom: 3px solid $jade;
+    }
+  }
+
+  &::selection {
+    background-color: $medium-light-gray;
+  }
+}
+
+h4, %h4 {
+  color: $gray;
+  font-size: 0.8rem;
+  font-weight: $bold;
+  letter-spacing: 1.5px;
+  line-height: 1.4rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+
+  .inline-code {
+    text-transform: none;
+  }
+}
+
+h5, %h5 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+p, .p {
+  font-size: 1rem;
+  line-height: 1.618rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.with-list {
+  padding-bottom: 5px;
+}
+
+.inline-code {
+  background-color: $medium-light-gray;
+  border-radius: 3px;
+  font-family: Monaco, monospace;
+  font-size: 0.8rem;
+  line-height: 0;
+  padding: 3px 8px;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+em {
+  font-style: italic;
+}
+
+* {
+  &::selection {
+    background-color: $translucent-jade;
+  }
+}
+
+@media screen and (max-width: $phone-landscape-max) {
+  h1, %h1 {
+    font-size: 1.75rem;
+  }
+
+  h4, %h4 {
+    font-size: 1rem;
+  }
+}
