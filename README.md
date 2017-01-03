@@ -1,5 +1,4 @@
 From 0 to Website
-		die("fork() failed");
 ========================================
 
 This curriculum is built using [Gulp][gulp], [Handlebars.js][handlebars], and [SCSS][scss]. It makes heavy use of [Minimill's project template][minimill].
