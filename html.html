@@ -202,7 +202,7 @@
 
 <h3 id="structure"><a href="#structure">How do we organize HTML files?</a></h3>
 
-<p class="with-list">This might be a little complicated, and it's hard to explain without looking at an example. So, let's use this website as an example! The <strong>root directory</strong> of this website is a folder called <code class="inline-code">jade/</code>, and it contains six HTML files. Here are the files and their respective URLs:</p>
+<p class="with-list">This might be a little complicated, and it's hard to explain without looking at an example. So, let's use this website as an example! The <strong>root directory</strong> of this website is a folder simply named <code class="inline-code">/</code>, and it contains six HTML files. Here are the files and their respective URLs:</p>
 <ul>
   <li><code class="inline-code">index.html</code> : <code class="inline-code">/</code></li>
   <li><code class="inline-code">html.html</code> : <code class="inline-code">/html.html</code></li>
@@ -213,18 +213,6 @@
 </ul>
 
 <p>Note that every page's URL must contain the file name, except for <code class="inline-code">index.html</code>. <span class="major-key">When a folder contains a file named <code class="inline-code">index.html</code>, that is the default page that will be shown when you don't specify a file name.</span></p>
-
-<p>Also, this is an interesting case, because the jade folder is really a folder that lives inside of my personal website. So what the directory structure really looks like is:</p>
-
-<pre><code class="language-markup">/
-  - index.html
-  - jade/
-    - index.html
-    - html.html
-    - css.html
-    - js.html
-    - git.html
-    - nextsteps.html</code></pre>
 
 <p>There are other files apart from the HTML, so this is a little simplified. Still, this should help clarify the structure.</p>
 
@@ -237,7 +225,7 @@
 
 <p>This is a huge problem. If something's broken on your site, how do you know what's happening? Or, maybe more interesting, if you see something awesome on another website, is there a way to find out why it looks the way it does?</p>
 <p>Fortunately, this problem has already been solved beyond our wildest dreams by very smart people! You can <strong>inspect element</strong> by right-clicking in Chrome, Safari, or Firefox. &lpar;In Safari, you might have to <a href="https://developer.apple.com/library/iad/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html">enable this manually</a>&rpar;.</p>
-<p>You can also view the <strong>source code</strong> in <code class="inline-code">Tools > Web Developer > Source Code</code> in Firefox, <code class="inline-code">View > Developer > View Source</code> in Chrome, and <code class="inline-code">Develop > Show Page Source</code> in Safari.</p>The <code class="inline-code">Fn</code>+<code class="inline-code">F12</code> will also often work.
+<p>You can also view the <strong>source code</strong> in <code class="inline-code">Tools > Web Developer > Source Code</code> in Firefox, <code class="inline-code">View > Developer > View Source</code> in Chrome, and <code class="inline-code">Develop > Show Page Source</code> in Safari. <code class="inline-code">Fn</code>+<code class="inline-code">F12</code> will also often work.</p>
 <p>Try viewing the source for this page now! You'll see some things that look familiar, and some things that might look a little bizarre. It's great practice to do this whenever you come across a website you really like and want to see what's going on under the hood.</p>
 <p><span class="major-key">If there's something you don't understand, Google it. Always. Every time.</span> Most of the learning we do as developers happens while we're on the job, or building something on our own, not from tutorials like this. Don't be afraid to explore and learn something new.</p>
 
