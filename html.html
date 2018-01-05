@@ -104,7 +104,13 @@
 <pre><code class="language-markup">&lt;img src="http://imgs.xkcd.com/comics/tags.png"&gt;</code></pre>
 <p>Note that <code class="inline-code">&lt;img&gt;</code> tags do not need need a closing tag, i.e., <code class="inline-code">&lt;/img&gt;</code>.
 
-<p>Also, note that the source of the image (a URL specifying the location of the image) goes inside the tag itself. This isn't the only <strong>attribute</strong> that can be specified inside the tag&colon; we can also set the height and/or width of the image like this!</p>
+<p>Also, note that the source of the image &lpar;a URL specifying the location of the image&rpar; goes inside the tag itself. This isn't the only <strong>attribute</strong> that can be specified inside the tag&colon; we can also specify <code class="inline-code">alt</code> text that provides an image description for accessibility purposes &lpar;primarily for screen reader users&rpar; or for instances when an image might not load.
+
+<pre><code class="language-markup">&lt;img src="https://fudogblog.files.wordpress.com/2009/05/chow3.jpg" alt="A chow chow, a type of dog breed originally from northern China, stands on some grass."&gt;</code></pre>
+
+It's standard practice to design or develop with accessibility in mind, and there are many possibilities with HTML alone to vastly improve the accessibility of one's site. <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">MDN's documentation</a> on using HTML for maximizing accessibility is definitely worth looking through!
+
+We can also set the height and/or width of the image using their respective attributes like this!</p>
 
 <pre><code class="language-markup">&lt;img src="http://imgs.xkcd.com/comics/tags.png" width="100%"&gt;</code></pre>
 <pre><code class="language-markup">&lt;img src="http://imgs.xkcd.com/comics/tags.png" height="300px"&gt;</code></pre>
@@ -145,7 +151,7 @@
 
 
 
-<p>OK, we've already learned a lot! There are more useful HTML elements out there, but we still have a pretty good idea of what HTML looks like. Now, let's focus on how to use HTML in practice.</p>
+<p>OK, we've already learned a lot! There are more useful HTML elements out there &lpar;<a href="http://htmlreference.io/">htmlreference.io</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN</a> are great resources for learning more about the elements available for use&rpar;, but we still have a pretty good idea of what HTML looks like. Now, let's focus on how to use HTML in practice.</p>
 
 <h3 id="files"><a href="#files">What should an HTML file look like?</a></h3>
 
@@ -160,7 +166,7 @@
     &lt;/head&gt;
     &lt;body&gt;
         &lt;!-- Put all content here. --&gt;
-    &lt;/body&gt;
+    &lt;/body&g
 &lt;/html&gt;</code></pre>
 
 <p class="with-list">Check it out! Let's look at this file line-by-line to understand it.</p>
@@ -224,7 +230,7 @@
 <h3 id="inspector"><a href="#inspector">How do we know what's going on in the browser?</a></h3>
 
 <p>This is a huge problem. If something's broken on your site, how do you know what's happening? Or, maybe more interesting, if you see something awesome on another website, is there a way to find out why it looks the way it does?</p>
-<p>Fortunately, this problem has already been solved beyond our wildest dreams by very smart people! You can <strong>inspect element</strong> by right-clicking in Chrome, Safari, or Firefox. &lpar;In Safari, you might have to <a href="https://developer.apple.com/library/iad/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html">enable this manually</a>&rpar;.</p>
+<p>Fortunately, this problem has already been solved beyond our wildest dreams by very smart people! You can <strong>inspect element</strong> by right-clicking in Chrome, Safari, or Firefox. &lpar;In Safari, you might have to <a href="https://developer.apple.com/library/iad/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html">enable this manually.</a>&rpar;</p>
 <p>You can also view the <strong>source code</strong> in <code class="inline-code">Tools > Web Developer > Source Code</code> in Firefox, <code class="inline-code">View > Developer > View Source</code> in Chrome, and <code class="inline-code">Develop > Show Page Source</code> in Safari. <code class="inline-code">Fn</code>+<code class="inline-code">F12</code> will also often work.</p>
 <p>Try viewing the source for this page now! You'll see some things that look familiar, and some things that might look a little bizarre. It's great practice to do this whenever you come across a website you really like and want to see what's going on under the hood.</p>
 <p><span class="major-key">If there's something you don't understand, Google it. Always. Every time.</span> Most of the learning we do as developers happens while we're on the job, or building something on our own, not from tutorials like this. Don't be afraid to explore and learn something new.</p>
