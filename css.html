@@ -71,6 +71,34 @@
 <p>Hopefully, you've recently finished building yourself a complete page in HTML. &ldquo;But wait,&rdquo; you say. &ldquo;This isn't what real websites look like. This is what garbage websites look like!&rdquo;</p>
 <p>Even if your HTML looks perfect, it's not enough on its own. Thankfully, we have CSS: a tool to help our websites not look like garbage.</p>
 
+<h3 id="linking"><a href="#linking">How do CSS and HTML work with each other?</a></h3>
+
+<p>Unlike HTML, CSS doesn't render on the browser alone &mdash; CSS styles rely on the elements in the HTML file to display properly. We're going to show you how to integrate a CSS stylesheet into your existing <code class="inline-code">index.html</code> file so you can practice writing CSS and visualize the styles it applies to your HTML file.</p>
+
+<p>Just like HTML, you can write all of your CSS in one file, as long as you end the filename in <code class="inline-code">.css</code>. You can put the file in the same directory as your HTML files, or create a folder called &ldquo;css&rdquo; and put the file there, so long as you link the file with the correct path. Then, in your HTML file, link to the CSS file in the <code class="inline-code">head</code>, using the following syntax:</p>
+
+<pre><code class="language-markup">&lt;head&gt;
+    &lt;title&gt;How Website&lt;/title&gt;
+    &lt;!-- The href for the CSS will be different depending on
+        whether you put the CSS file in a new directory, which is
+        what I've done here. --&gt;
+    &lt;link rel="stylesheet" type="text/css" href="/css/style.css"&gt;
+&lt;/head&gt;</code></pre>
+
+<p>A consequence of this is that you can have one CSS file for multiple HTML files. Once again, that's how this website works! Here's another look at the directory structure, including the CSS:</p>
+<pre><code class="language-markup">
+/
+  - css/
+    - style.css
+  - index.html
+  - html.html
+  - css.html
+  - js.html
+  - git.html
+  - nextsteps.html</code></pre>
+
+<p>Each HTML file links to the same CSS file.</p>
+
 <h3 id="intro"><a href="#intro">What is CSS? What does it look like?</a></h3>
 
 <p><span class="major-key">CSS modifies properties of HTML elements.</span> Here's what it looks like:</p>
@@ -241,6 +269,15 @@ You don't want your line-height to be less than your font-size. Readability shou
 
 <p>That snippet of HTML is all I need to use Lato at different weights.</p>
 
+<p><span class="major-key">It's important to note that in order to use Google Fonts, you must import the font before importing the CSS file</span>, like so:</p>
+
+<pre><code class="language-markup">&lt;head&gt;
+    &lt;title&gt;Kylo Ren's Personal Blog&lt;/title&gt;
+    &lt;link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic' rel='stylesheet' type='text/css'&gt;
+    &lt;link rel="stylesheet" type="text/css" href="/css/style.css"&gt;
+&lt;/head&gt;</code></pre>
+
+
 <h4>Using typography to your advantage</h4>
 
 <p>Regardless of what content you have on your website, choosing the right typeface and using type in meaningful ways can go a long way in improving the way information is communicated! This <a href="http://pierrickcalvez.com/journal/a-five-minutes-guide-to-better-typography">five minute guide to better typography</a> is a great place to start, and <a href="https://www.typewolf.com/">Typewolf</a> is useful for typography inspiration and for finding free alternatives to popular typefaces.</p>
@@ -384,43 +421,6 @@ You don't want your line-height to be less than your font-size. Readability shou
 <p>That model shows an HTML element with a <code class="inline-code">width</code> of <code class="inline-code">267px</code> and a <code class="inline-code">height</code> of <code class="inline-code">24px</code>. It has <code class="inline-code">6px</code> of <code class="inline-code">padding</code> on every side, no border or margin, and it has <code class="inline-code">top: 156px</code>. You can actually see this box model for any HTML element by right-clicking the element and choosing <code class="inline-code">inspect element</code>!</p>
 
 <p>You can put padding on specific sides of an element by using <code class="inline-code">padding-right</code>, <code class="inline-code">padding-top</code>, <code class="inline-code">padding-left</code>, and <code class="inline-code">padding-bottom</code>&semi; same with margin. If the rule doesn't include a direction, like <code class="inline-code">margin: 5px;</code>, then it will apply <code class="inline-code">5px</code> of margin to every side of the element.</p>
-
-<div class="separator"></div>
-
-<p>Now that we've learned some useful CSS rules, we'll learn how to integrate a CSS file with our HTML!</p>
-
-<h3 id="linking"><a href="#linking">How do I put CSS in my HTML file?</a></h3>
-
-<p>Just like HTML, you can write all of your CSS in one file, as long as you end the filename in <code class="inline-code">.css</code>. You can put the file in the same directory as your HTML files, or create a folder called &ldquo;css&rdquo; and put the file there. Then, in your HTML file, link to the CSS file in the <code class="inline-code">head</code>, using the following syntax:</p>
-
-<pre><code class="language-markup">&lt;head&gt;
-    &lt;title&gt;How Website&lt;/title&gt;
-    &lt;!-- The href for the CSS will be different depending on
-        whether you put the CSS file in a new directory, which is
-        what I've done here. --&gt;
-    &lt;link rel="stylesheet" type="text/css" href="/css/style.css"&gt;
-&lt;/head&gt;</code></pre>
-
-<p>A consequence of this is that you can have one CSS file for multiple HTML files. Once again, that's how this website works! Here's another look at the directory structure, including the CSS:</p>
-<pre><code class="language-markup">
-/
-  - css/
-    - style.css
-  - index.html
-  - html.html
-  - css.html
-  - js.html
-  - git.html
-  - nextsteps.html</code></pre>
-
-<p>Each HTML file links to the same CSS file.</p>
-
-<p>An important note is that I also use a font from Google Fonts. <span class="major-key">To use Google Fonts, you must import the font before importing the CSS file</span>, like so:</p>
-<pre><code class="language-markup">&lt;head&gt;
-    &lt;title&gt;Kylo Ren's Personal Blog&lt;/title&gt;
-    &lt;link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic' rel='stylesheet' type='text/css'&gt;
-    &lt;link rel="stylesheet" type="text/css" href="/css/style.css"&gt;
-&lt;/head&gt;</code></pre>
 
 <div class="separator"></div>
 
